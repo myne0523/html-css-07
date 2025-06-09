@@ -1,0 +1,28 @@
+// === Base ===
+// Reset CSS gốc của dự án: typography, body, html...
+@use "./base"; // base rules, fonts, heading, link...
+
+// === Abstracts ===
+// Biến, hàm, mixin cần khai báo trước để các file sau sử dụng
+@use "./abstracts"; // variables, mixins, functions...
+
+
+// === Layout ===
+// Bố cục lớn như header, footer, grid wrapper
+@use "./layout";
+
+// === Components ===
+// Nút, thẻ, card, modal, form...
+@use "./components";
+
+// === Pages ===
+// Quy tắc riêng cho từng page cụ thể
+@use "./pages";
+
+// === Themes ===
+// Dark mode, light mode, override màu
+@use "./themes";
+
+// === Vendors ===
+// Những file reset hoặc normalize cần được áp dụng sớm nhất
+@use "./vendors"; // ví dụ: normalize, bootstrap

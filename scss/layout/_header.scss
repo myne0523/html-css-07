@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mixins;
+
+// _header.scss
+/* Header */
+.header {
+    --primary-color-bg:#{var.$primary-color-bg};
+
+    padding: 52px 0 15px 0;
+    background: var(--primary-color-bg);
+
+  &.fixed {
+    position: sticky;
+    top: -10px;
+    z-index: 3;
+  }
+}
+
+
+.header__inner{
+    @include mixins.flex($justify:space-between,$align:center);
+}
+
+.header-icon{
+  width: 116.12px;
+  height: 26px;
+  object-fit: cover;
+}
+
+.header-right{
+    @include mixins.flex($align:center,$column-gap: 30px);
+}
+
+.header__link{
+  @extend %text-btn-2;
+  color: #{var.$primary-color-heading};
+}

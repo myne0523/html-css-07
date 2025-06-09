@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mixins;
+// _button.scss
+.header__btn{
+    @include mixins.btn(48px,116px, #201830,6px, text-btn-2)
+}
+
+.hero__btn{
+    @include mixins.btn(63px,157px,#936CDD,8px,text-btn-1);
+}

@@ -1,0 +1,239 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mixins;
+@use "../base/typography" ;
+
+// _home.scss
+// Hero
+/* Hero */
+.hero{
+    padding: 110px 0 158px 0;
+    background: #{var.$primary-color-bg};
+}
+
+.hero__media{
+    position: relative;
+    @include mixins.flex($column-gap:30px);
+}
+
+.hero__thumb-left{
+    &-wrap{
+        position: relative;
+        
+
+        .hero__thumb{
+            width: 270px;
+            height: 302px;
+            object-fit: cover;
+        }
+
+        .hero__play-audio{
+            position: absolute;
+            bottom: -30px;
+            left: 38px;
+            width: 194px;
+            height: 60px;
+            object-fit: cover;
+        }
+    }
+}
+
+.hero__group{
+    margin-top: 55px;
+
+    &-desc{
+        @extend %text-btn-3;
+        text-align: start;
+        color: #{var.$primary-color-heading};
+    }
+
+    &-avt{
+        @include mixins.flex;
+
+        .hero__avt{
+            width: 48px;
+            height: 48px;
+            object-fit: cover;
+
+            &-wrap{
+            @include mixins.flex(center,center);
+
+            width: 48px;
+            height: 48px;
+            margin-left: -15px;
+            border-radius: 50%;
+            background: #{var.$primary-color-heading};
+
+            .hero__value{
+                color: #{var.$primary-color-btn-text};
+                text-align: center;
+                font-size: 1.2rem;
+                font-weight: 600;
+                line-height: 1.83;
+            }
+        }
+        }
+
+        .hero__avt+.hero__avt{
+            margin-left: -15px;
+        }
+    }
+}
+
+.hero__thumb-right{
+    position: relative;
+    padding-top: 23px;
+
+        .hero__icon{
+        @include mixins.flex($align:center,$column-gap:18px);
+        padding-bottom: 28px;
+
+        &-1{
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+        }
+
+        &-2{
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+        }
+
+        &-3{
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+        }
+    }
+
+    .hero__thumb{
+        width: 270px;
+        height: 302px;
+        object-fit: cover;
+    }
+}
+
+.hero__decor-wrap{
+    position: relative;
+
+    .hero__decor-1{
+        position: absolute;
+        top: -45px;
+        left: 55px;
+    }
+    .hero__decor-2{
+        position: absolute;
+        bottom: -35px;
+        right: 95px;
+    }
+}
+
+.hero__decor_circle-wrap{
+    @include mixins.flex(center,center);
+
+    width: 82px;
+    height: 82px;
+    margin-left: 112px;
+    border-radius: 50%;
+    background: #{var.$primary-color-decor};
+
+    .hero__decor_circle-text{
+        color: #FFEFE7;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+
+        .value{
+            display: inline-block;
+            margin-bottom: 4px;
+            color: #{var.$primary-color-btn-text};
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 800;
+        }
+    }
+}
+
+
+.hero__thumb-card{
+    position: absolute;
+    bottom: 16px;
+    left: 38px;
+    padding:14px 45px;
+    border-radius: 9px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.40);
+    box-shadow: 0px 12px 44px 0px rgba(0, 0, 0, 0.07);
+    backdrop-filter: blur(5px);
+
+    .singer-name{
+        margin-bottom: 6px;
+        color: #{var.$primary-color-heading};
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    .name-song{
+        color: #{var.$primary-color-desc};
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+}
+
+.hero__content{
+    margin-top: 20px;
+}
+
+
+
+.hero__heading{
+    &-wrap{
+    display: inline-block;
+    position: relative;
+    }
+    
+    position: relative;
+    margin-bottom: 20px;
+    @extend %h1;
+    z-index: 2;
+
+    
+    &-decor{
+        position: absolute;
+        left: 33px;
+        bottom: 75px;
+    }
+}
+
+
+.hero__desc{
+    margin-bottom: 40px;
+    @extend %p1;
+}
+
+.hero__cta{
+    @include mixins.flex($align:center,$column-gap:30px);
+
+    &-right{
+    @include mixins.flex($align:center,$column-gap:13px);
+    }
+}
+
+.hero__link{
+    @extend %text-btn-1;
+    color: #201830;
+}
+
+
+.play-icon-wrap{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    @include mixins.flex(center,center);
+    background: #{var.$primary-color-heading};
+    transition: transform .25s ease;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+}

@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mixins;
+@use "../base/typography" ;
+
+.navbar__list{
+    --primary-heading-color:#{var.$primary-color-heading};
+    display: flex;
+
+    .navbar__link{
+        @extend %p2;
+
+        padding: 8px 21px;
+
+        &:hover,
+        &--active {
+            color: var(--primary-heading-color);
+            text-shadow: 1px 0 0 currentColor;
+        }
+    }
+}

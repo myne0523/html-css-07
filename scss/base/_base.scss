@@ -1,0 +1,35 @@
+@use "../abstracts/variables" as var;
+// _base.scss
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: var.$font-family-body, sans-serif;
+    background: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var.$font-family-body, sans-serif;
+}
+
+input, textarea, select, button{
+    font-size: inherit;
+    font-family: inherit;
+}
+
+input, textarea, select, button{
+    font-family: inherit;
+    font-size: inherit;
+}
+
+a{
+    text-decoration: none;
+}
