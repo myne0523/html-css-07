@@ -81,7 +81,7 @@
 
 .hero__thumb-right{
     position: relative;
-    padding-top: 23px;
+    padding-top: 5px;
 
         .hero__icon{
         @include mixins.flex($align:center,$column-gap:18px);
@@ -235,5 +235,113 @@
 
     &:hover{
         transform: scale(1.1);
+    }
+}
+
+// Feature
+/* Feature */
+.feature{
+    margin-top: 160px;
+
+    &__heading-wrap{
+        position: relative;
+        width: 470px;
+        padding-bottom: 12px;
+        margin-bottom: 18px;
+    }
+
+    &__heading-decor{
+        position: absolute;
+        right: 61px;
+        bottom: 0;
+    }
+
+    &__heading{
+        @extend %h2;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__desc{
+        @extend %p2;
+        margin-bottom: 38px;
+    }
+
+    &__btn__content{
+        @include mixins.flex(center,center,$column-gap:8px);
+    }
+
+    &__btn__content-play{
+        @include mixins.flex(center,center);
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #{var.$primary-color-btn-text};
+    }
+
+    .media{
+        position: relative;
+        min-height: 339px;
+
+        &::after{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            content: "";
+            display: inline-block;
+            width: 287px;
+            height: 287px;
+            border-radius: 50%;
+            background: rgba(255, 144, 81, 0.4);
+            filter: blur(129px);
+            z-index: -1;
+        }
+    }
+
+    &-icon-1{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+    }
+
+    &-icon-2{
+        position: absolute;
+        top: 0;
+        left: 40%;
+        width: 148px;
+        height: 148px;
+        object-fit: cover;
+    }
+
+    &-icon-3{
+        position: absolute;
+        bottom: 0;
+        left: 35%;
+        width: 126px;
+        height: 126px;
+        object-fit: cover;
+    }
+
+    &-icon-4{
+        position: absolute;
+        bottom: 30px;
+        right: 58px;
+        width: 138px;
+        height: 138px;
+        object-fit: cover; 
+    }
+
+    &-icon-5{
+        position: absolute;
+        top: 51px;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        object-fit: cover; 
     }
 }

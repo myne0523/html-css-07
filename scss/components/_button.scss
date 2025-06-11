@@ -6,5 +6,9 @@
 }
 
 .hero__btn{
-    @include mixins.btn(63px,157px,#936CDD,8px,text-btn-1);
+    @include mixins.btn(64px,157px,#936CDD,8px,text-btn-1);
+}
+
+.feature__btn{
+    @include mixins.btn(64px,157px,#936CDD,8px,text-btn-1);
 }
