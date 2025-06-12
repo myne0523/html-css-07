@@ -312,7 +312,7 @@
     &-icon-2{
         position: absolute;
         top: 0;
-        left: 40%;
+        left: 35%;
         width: 148px;
         height: 148px;
         object-fit: cover;
@@ -321,7 +321,7 @@
     &-icon-3{
         position: absolute;
         bottom: 0;
-        left: 35%;
+        left: 25%;
         width: 126px;
         height: 126px;
         object-fit: cover;
@@ -330,7 +330,7 @@
     &-icon-4{
         position: absolute;
         bottom: 30px;
-        right: 58px;
+        right: 15%;
         width: 138px;
         height: 138px;
         object-fit: cover; 
@@ -343,5 +343,285 @@
         width: 100px;
         height: 100px;
         object-fit: cover; 
+    }
+
+    &__gallery{
+        margin-top: 160px;
+
+        .content{
+
+            .feature__heading{
+                text-align: center;
+            }
+
+            .feature__heading-decor{
+                right: 90px;
+            }
+
+            .feature__desc{
+                width: 470px;
+                text-align: center;
+            }
+        }
+
+        .gallery__list{
+            margin-top: 70px;
+
+            .col-lg-8{
+
+                .row{
+                    margin-bottom: 30px;
+                }
+            }
+            
+            .education__card{
+                position: relative;
+                min-height: 600px;
+
+                &-thumb{
+                    width: 100%;
+                    height: 100%;
+                }
+                
+                &-text{
+                    display:block;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    padding: 16px 0px 16px 24px;
+                    border-radius: 8px;
+                    fill: rgba(255, 255, 255, 0.20);
+                    backdrop-filter: blur(10px);
+                }
+
+                &-heading{
+                    @extend %text-btn-1;
+
+                    text-align: start;
+
+                    &-wrap{
+                        @include mixins.flex($align:center,$column-gap:8px);
+                    }
+
+                    &-icon{
+                        @include mixins.flex(center,center);
+
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 50%;
+                        border: 1px solid #{var.$primary-color-btn-text};
+                        background: transparent;
+                    }
+                }
+
+                &-desc{
+                    @extend %p3;
+
+                    color: #{var.$primary-color-btn-text};
+                }
+            }
+
+            .healthcare__card{
+                position: relative;
+                height: 285px; 
+
+                &-thumb{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+
+                 &-text{
+                    display:block;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    padding: 16px 0px 16px 24px;
+                    border-radius: 8px;
+                    fill: rgba(255, 255, 255, 0.20);
+                    backdrop-filter: blur(10px);
+                }
+
+                &-heading{
+                    @extend %text-btn-1;
+
+                    text-align: start;
+
+                    &-wrap{
+                        @include mixins.flex($align:center,$column-gap:8px);
+                    }
+
+                    &-icon{
+                        @include mixins.flex(center,center);
+
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 50%;
+                        border: 1px solid #{var.$primary-color-btn-text};
+                        background: transparent;
+                    }
+                }
+
+                &-desc{
+                    @extend %p3;
+
+                    color: #{var.$primary-color-btn-text};
+                }
+            }
+
+            .music__card{
+                position: relative;
+                height: 100%;
+
+                &-thumb{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+
+                &-text{
+                    display:block;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    padding: 16px 0px 16px 24px;
+                    border-radius: 8px;
+                    fill: rgba(255, 255, 255, 0.20);
+                    backdrop-filter: blur(10px);
+                }
+
+                &-heading{
+                    @extend %text-btn-1;
+
+                    text-align: start;
+
+                    &-wrap{
+                        @include mixins.flex($align:center,$column-gap:8px);
+                    }
+
+                    &-icon{
+                        @include mixins.flex(center,center);
+
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 50%;
+                        border: 1px solid #{var.$primary-color-btn-text};
+                        background: transparent;
+                    }
+                }
+
+                &-desc{
+                    @extend %p3;
+
+                    color: #{var.$primary-color-btn-text};
+                }
+            }
+
+            .fashion__card{
+                position: relative;
+                height: 100%;
+
+                &-thumb{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+
+                &-text{
+                    display:block;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    padding: 16px 0px 16px 24px;
+                    border-radius: 8px;
+                    fill: rgba(255, 255, 255, 0.20);
+                    backdrop-filter: blur(10px);
+                }
+
+                &-heading{
+                    @extend %text-btn-1;
+
+                    text-align: start;
+
+                    &-wrap{
+                        @include mixins.flex($align:center,$column-gap:8px);
+                    }
+
+                    &-icon{
+                        @include mixins.flex(center,center);
+
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 50%;
+                        border: 1px solid #{var.$primary-color-btn-text};
+                        background: transparent;
+                    }
+                }
+
+                &-desc{
+                    @extend %p3;
+
+                    color: #{var.$primary-color-btn-text};
+                }
+            }
+
+            .comedy__card{
+                position: relative;
+                height: 100%;
+
+                &-thumb{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+
+                &-text{
+                    display:block;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    padding: 16px 0px 16px 24px;
+                    border-radius: 8px;
+                    fill: rgba(255, 255, 255, 0.20);
+                    backdrop-filter: blur(10px);
+                }
+
+                &-heading{
+                    @extend %text-btn-1;
+
+                    text-align: start;
+
+                    &-wrap{
+                        @include mixins.flex($align:center,$column-gap:8px);
+                    }
+
+                    &-icon{
+                        @include mixins.flex(center,center);
+
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 50%;
+                        border: 1px solid #{var.$primary-color-btn-text};
+                        background: transparent;
+                    }
+                }
+
+                &-desc{
+                    @extend %p3;
+
+                    color: #{var.$primary-color-btn-text};
+                }
+            }
+        }
+
+        .cta{
+            margin-top: 55px;
+
+            @include mixins.flex(center);
+        }
     }
 }

@@ -100,7 +100,7 @@ a {
   line-height: 1.23;
 }
 
-.hero__link, .hero__btn, .feature__btn {
+.hero__link, .feature__gallery .gallery__list .education__card-heading, .feature__gallery .gallery__list .healthcare__card-heading, .feature__gallery .gallery__list .music__card-heading, .feature__gallery .gallery__list .fashion__card-heading, .feature__gallery .gallery__list .comedy__card-heading, .hero__btn, .feature__btn, .gallery__btn {
   color: #FFF;
   font-size: 1.8rem;
   font-weight: 600;
@@ -136,6 +136,13 @@ a {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.75;
+}
+
+.feature__gallery .gallery__list .education__card-desc, .feature__gallery .gallery__list .healthcare__card-desc, .feature__gallery .gallery__list .music__card-desc, .feature__gallery .gallery__list .fashion__card-desc, .feature__gallery .gallery__list .comedy__card-desc {
+  color: #665F73;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.71;
 }
 
 .col, .row[class*=row-cols-] > *,
@@ -1170,6 +1177,24 @@ a {
   opacity: 0.5;
 }
 
+.gallery__btn {
+  --height:64px;
+  --width:157px;
+  --primary-color-btn:#201830;
+  display: inline-block;
+  min-width: var(--width);
+  height: var(--height);
+  padding: 0 20px;
+  border: 1px solid var(--primary-color-btn);
+  border-radius: 8px;
+  line-height: var(--height);
+  color: #FFF;
+  background: var(--primary-color-btn);
+}
+.gallery__btn:hover {
+  opacity: 0.5;
+}
+
 /* Hero */
 .hero {
   padding: 110px 0 158px 0;
@@ -1469,7 +1494,7 @@ a {
 .feature-icon-2 {
   position: absolute;
   top: 0;
-  left: 40%;
+  left: 35%;
   width: 148px;
   height: 148px;
   object-fit: cover;
@@ -1477,7 +1502,7 @@ a {
 .feature-icon-3 {
   position: absolute;
   bottom: 0;
-  left: 35%;
+  left: 25%;
   width: 126px;
   height: 126px;
   object-fit: cover;
@@ -1485,7 +1510,7 @@ a {
 .feature-icon-4 {
   position: absolute;
   bottom: 30px;
-  right: 58px;
+  right: 15%;
   width: 138px;
   height: 138px;
   object-fit: cover;
@@ -1497,6 +1522,256 @@ a {
   width: 100px;
   height: 100px;
   object-fit: cover;
+}
+.feature__gallery {
+  margin-top: 160px;
+}
+.feature__gallery .content .feature__heading {
+  text-align: center;
+}
+.feature__gallery .content .feature__heading-decor {
+  right: 90px;
+}
+.feature__gallery .content .feature__desc {
+  width: 470px;
+  text-align: center;
+}
+.feature__gallery .gallery__list {
+  margin-top: 70px;
+}
+.feature__gallery .gallery__list .col-lg-8 .row {
+  margin-bottom: 30px;
+}
+.feature__gallery .gallery__list .education__card {
+  position: relative;
+  min-height: 600px;
+}
+.feature__gallery .gallery__list .education__card-thumb {
+  width: 100%;
+  height: 100%;
+}
+.feature__gallery .gallery__list .education__card-text {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 16px 0px 16px 24px;
+  border-radius: 8px;
+  fill: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+.feature__gallery .gallery__list .education__card-heading {
+  text-align: start;
+}
+.feature__gallery .gallery__list .education__card-heading-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 8px;
+}
+.feature__gallery .gallery__list .education__card-heading-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #FFF;
+  background: transparent;
+}
+.feature__gallery .gallery__list .education__card-desc {
+  color: #FFF;
+}
+.feature__gallery .gallery__list .healthcare__card {
+  position: relative;
+  height: 285px;
+}
+.feature__gallery .gallery__list .healthcare__card-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.feature__gallery .gallery__list .healthcare__card-text {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 16px 0px 16px 24px;
+  border-radius: 8px;
+  fill: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+.feature__gallery .gallery__list .healthcare__card-heading {
+  text-align: start;
+}
+.feature__gallery .gallery__list .healthcare__card-heading-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 8px;
+}
+.feature__gallery .gallery__list .healthcare__card-heading-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #FFF;
+  background: transparent;
+}
+.feature__gallery .gallery__list .healthcare__card-desc {
+  color: #FFF;
+}
+.feature__gallery .gallery__list .music__card {
+  position: relative;
+  height: 100%;
+}
+.feature__gallery .gallery__list .music__card-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.feature__gallery .gallery__list .music__card-text {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 16px 0px 16px 24px;
+  border-radius: 8px;
+  fill: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+.feature__gallery .gallery__list .music__card-heading {
+  text-align: start;
+}
+.feature__gallery .gallery__list .music__card-heading-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 8px;
+}
+.feature__gallery .gallery__list .music__card-heading-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #FFF;
+  background: transparent;
+}
+.feature__gallery .gallery__list .music__card-desc {
+  color: #FFF;
+}
+.feature__gallery .gallery__list .fashion__card {
+  position: relative;
+  height: 100%;
+}
+.feature__gallery .gallery__list .fashion__card-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.feature__gallery .gallery__list .fashion__card-text {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 16px 0px 16px 24px;
+  border-radius: 8px;
+  fill: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+.feature__gallery .gallery__list .fashion__card-heading {
+  text-align: start;
+}
+.feature__gallery .gallery__list .fashion__card-heading-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 8px;
+}
+.feature__gallery .gallery__list .fashion__card-heading-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #FFF;
+  background: transparent;
+}
+.feature__gallery .gallery__list .fashion__card-desc {
+  color: #FFF;
+}
+.feature__gallery .gallery__list .comedy__card {
+  position: relative;
+  height: 100%;
+}
+.feature__gallery .gallery__list .comedy__card-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.feature__gallery .gallery__list .comedy__card-text {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 16px 0px 16px 24px;
+  border-radius: 8px;
+  fill: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+.feature__gallery .gallery__list .comedy__card-heading {
+  text-align: start;
+}
+.feature__gallery .gallery__list .comedy__card-heading-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 8px;
+}
+.feature__gallery .gallery__list .comedy__card-heading-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #FFF;
+  background: transparent;
+}
+.feature__gallery .gallery__list .comedy__card-desc {
+  color: #FFF;
+}
+.feature__gallery .cta {
+  margin-top: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
