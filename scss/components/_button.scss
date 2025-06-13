@@ -16,3 +16,7 @@
 .gallery__btn{
     @include mixins.btn(64px,157px,#201830,8px,text-btn-1);
 }
+
+.popular__btn{
+    @include mixins.btn(64px,157px,#201830,8px,text-btn-1);
+}

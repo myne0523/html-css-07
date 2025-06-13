@@ -100,7 +100,14 @@ a {
   line-height: 1.23;
 }
 
-.hero__link, .feature__gallery .gallery__list .education__card-heading, .feature__gallery .gallery__list .healthcare__card-heading, .feature__gallery .gallery__list .music__card-heading, .feature__gallery .gallery__list .fashion__card-heading, .feature__gallery .gallery__list .comedy__card-heading, .hero__btn, .feature__btn, .gallery__btn {
+.feature__popular-bottom .episode__title {
+  color: #201830;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.hero__link, .feature__gallery .gallery__list .education__card-heading, .feature__gallery .gallery__list .healthcare__card-heading, .feature__gallery .gallery__list .music__card-heading, .feature__gallery .gallery__list .fashion__card-heading, .feature__gallery .gallery__list .comedy__card-heading, .hero__btn, .feature__btn, .gallery__btn, .popular__btn {
   color: #FFF;
   font-size: 1.8rem;
   font-weight: 600;
@@ -116,7 +123,7 @@ a {
   text-align: center;
 }
 
-.hero__group-desc {
+.hero__group-desc, .feature__popular-bottom .episode__link {
   color: #FFF;
   font-size: 1.4rem;
   font-weight: 600;
@@ -131,14 +138,14 @@ a {
   line-height: 1.66;
 }
 
-.feature__desc, .navbar__list .navbar__link {
+.feature__desc, .feature__popular-bottom .episode__desc, .navbar__list .navbar__link {
   color: #665F73;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.75;
 }
 
-.feature__gallery .gallery__list .education__card-desc, .feature__gallery .gallery__list .healthcare__card-desc, .feature__gallery .gallery__list .music__card-desc, .feature__gallery .gallery__list .fashion__card-desc, .feature__gallery .gallery__list .comedy__card-desc {
+.feature__gallery .gallery__list .education__card-desc, .feature__gallery .gallery__list .healthcare__card-desc, .feature__gallery .gallery__list .music__card-desc, .feature__gallery .gallery__list .fashion__card-desc, .feature__gallery .gallery__list .comedy__card-desc, .feature__popular-bottom .episode__sub-title {
   color: #665F73;
   font-size: 1.4rem;
   font-weight: 400;
@@ -1195,6 +1202,24 @@ a {
   opacity: 0.5;
 }
 
+.popular__btn {
+  --height:64px;
+  --width:157px;
+  --primary-color-btn:#201830;
+  display: inline-block;
+  min-width: var(--width);
+  height: var(--height);
+  padding: 0 20px;
+  border: 1px solid var(--primary-color-btn);
+  border-radius: 8px;
+  line-height: var(--height);
+  color: #FFF;
+  background: var(--primary-color-btn);
+}
+.popular__btn:hover {
+  opacity: 0.5;
+}
+
 /* Hero */
 .hero {
   padding: 110px 0 158px 0;
@@ -1530,7 +1555,7 @@ a {
   text-align: center;
 }
 .feature__gallery .content .feature__heading-decor {
-  right: 90px;
+  right: 42px;
 }
 .feature__gallery .content .feature__desc {
   width: 470px;
@@ -1772,6 +1797,91 @@ a {
   justify-content: center;
   align-items: flex-start;
   column-gap: 0;
+}
+.feature__popular {
+  margin-top: 160px;
+  padding: 100px 0;
+  background: #FFF8F3;
+}
+.feature__popular-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 0;
+}
+.feature__popular-top .feature__heading-wrap {
+  width: 390px;
+  padding-bottom: 0;
+}
+.feature__popular-top .feature__heading-decor {
+  right: 45px;
+  bottom: 45px;
+}
+.feature__popular-bottom {
+  margin-top: 84px;
+}
+.feature__popular-bottom .episode__thumb {
+  width: 100%;
+  object-fit: cover;
+}
+.feature__popular-bottom .episode__content {
+  padding: 30px 0;
+}
+.feature__popular-bottom .episode__sub-title {
+  color: #FF9051;
+  margin-bottom: 6px;
+}
+.feature__popular-bottom .episode__title {
+  margin-bottom: 18px;
+}
+.feature__popular-bottom .episode__desc {
+  margin-bottom: 11px;
+}
+.feature__popular-bottom .episode__cta {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 6px;
+}
+.feature__popular-bottom .episode__cta .play-icon-wrap {
+  transition: all 0.25s ease;
+}
+.feature__popular-bottom .episode__cta .play-icon-wrap:hover {
+  background: #936CDD;
+}
+.feature__popular-bottom .episode__link {
+  color: #201830;
+  transition: color 0.25s ease;
+}
+.feature__popular-bottom .episode__link:hover {
+  color: #936CDD;
+}
+.feature__popular-bottom .row__below {
+  margin-top: 30px;
+}
+
+.dots {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 12px;
+  margin-top: 58px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #D8D5DE;
+}
+.dot__active {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #936CDD;
 }
 
 /*# sourceMappingURL=main.css.map */

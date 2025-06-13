@@ -355,7 +355,7 @@
             }
 
             .feature__heading-decor{
-                right: 90px;
+                right: 42px;
             }
 
             .feature__desc{
@@ -623,5 +623,109 @@
 
             @include mixins.flex(center);
         }
+    }
+
+    &__popular{
+        margin-top: 160px;
+        padding: 100px 0;
+        background: #{var.$primary-color-bg};
+
+        &-top{
+            @include mixins.flex(space-between, center);
+            
+            .feature__heading{
+
+                &-wrap{
+                    width: 390px;
+                    padding-bottom: 0;
+                }
+                
+                &-decor{
+                    right: 45px;
+                    bottom: 45px;
+                }
+            }
+        }
+
+        &-bottom{
+            margin-top: 84px;
+
+            .episode{
+                &__thumb{
+                width: 100%;
+                object-fit: cover;
+                }
+
+                &__content{
+                    padding: 30px 0;
+                }
+
+                &__sub-title{
+                @extend %p3;
+                
+                color: #{var.$primary-color-decor};
+                margin-bottom: 6px;
+                }
+
+                &__title{
+                    @extend %h3;
+
+                    margin-bottom: 18px;
+                }
+
+                &__desc{
+                    @extend %p2;
+
+                    margin-bottom: 11px;
+                }
+
+                &__cta{
+                    @include mixins.flex($align:center,$column-gap:6px);
+                    
+
+                    .play-icon-wrap{
+                        transition: all .25s ease;
+
+                        &:hover{
+                            background: #{var.$primary-color-btn};
+                        }
+                    }
+                }
+
+                &__link{
+                    @extend %text-btn-3;
+                    color: #{var.$primary-color-heading};
+                    transition: color .25s ease;
+                    
+                    &:hover{
+                        color: #{var.$primary-color-btn};
+                    }
+                }
+            }
+
+            .row__below{
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+.dots{
+    @include mixins.flex(center,center,$column-gap:12px);
+
+    margin-top: 58px;
+}
+
+.dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #D8D5DE;
+
+    &__active{
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #{var.$primary-color-btn};
     }
 }
