@@ -93,7 +93,7 @@ a {
   line-height: 1.14;
 }
 
-.feature__heading, .testimonial__heading {
+.feature__heading, .testimonial__heading, .newsletter__heading {
   color: #201830;
   font-size: 4.2rem;
   font-weight: 700;
@@ -107,7 +107,7 @@ a {
   line-height: 1.5;
 }
 
-.hero__link, .feature__gallery .gallery__list .education__card-heading, .feature__gallery .gallery__list .healthcare__card-heading, .feature__gallery .gallery__list .music__card-heading, .feature__gallery .gallery__list .fashion__card-heading, .feature__gallery .gallery__list .comedy__card-heading, .hero__btn, .feature__btn, .gallery__btn, .popular__btn {
+.hero__link, .feature__gallery .gallery__list .education__card-heading, .feature__gallery .gallery__list .healthcare__card-heading, .feature__gallery .gallery__list .music__card-heading, .feature__gallery .gallery__list .fashion__card-heading, .feature__gallery .gallery__list .comedy__card-heading, .hero__btn, .feature__btn, .gallery__btn, .popular__btn, .subscribe__btn {
   color: #FFF;
   font-size: 1.8rem;
   font-weight: 600;
@@ -138,7 +138,7 @@ a {
   line-height: 1.66;
 }
 
-.feature__desc, .feature__popular-bottom .episode__desc, .testimonial__desc, .navbar__list .navbar__link {
+.feature__desc, .feature__popular-bottom .episode__desc, .testimonial__desc, .newsletter__desc, .navbar__list .navbar__link, .subscribe__input::placeholder {
   color: #665F73;
   font-size: 1.6rem;
   font-weight: 400;
@@ -1220,6 +1220,44 @@ a {
   opacity: 0.5;
 }
 
+.subscribe__btn {
+  --height:64px;
+  --width:157px;
+  --primary-color-btn:#936CDD;
+  display: inline-block;
+  min-width: var(--width);
+  height: var(--height);
+  padding: 0 20px;
+  border: 1px solid var(--primary-color-btn);
+  border-radius: 8px;
+  line-height: var(--height);
+  color: #FFF;
+  background: var(--primary-color-btn);
+  border: none;
+  outline: none;
+}
+.subscribe__btn:hover {
+  opacity: 0.5;
+}
+
+.subscribe__form .row__inner {
+  align-items: center;
+}
+
+.subscribe__input {
+  width: 100%;
+  padding: 18px 0 18px 28px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: #2B213F;
+}
+.subscribe__input:focus {
+  outline: none;
+  border-color: #6c9eff;
+  box-shadow: 0 0 0 1px #6c9eff;
+}
+
 /* Hero */
 .hero {
   padding: 110px 0 158px 0;
@@ -1885,14 +1923,15 @@ a {
 
 /* Testimonial */
 .testimonial {
-  margin-top: 160px;
+  padding-top: 160px;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .testimonial::after {
   position: absolute;
-  top: 0;
+  top: 50%;
   right: -120px;
+  transform: translateY(-50%);
   content: "";
   display: inline-block;
   width: 287px;
@@ -1933,6 +1972,9 @@ a {
   width: 100%;
   display: block;
 }
+.testimonial__content {
+  padding-top: 56px;
+}
 .testimonial__heading-wrap {
   position: relative;
   margin-bottom: 38px;
@@ -1951,6 +1993,48 @@ a {
 }
 .testimonial__name {
   color: #ABA6B5;
+}
+
+/* Newsletter */
+.newsletter__inner {
+  position: relative;
+  margin-top: 160px;
+  padding: 100px 0;
+  border-radius: 12px;
+  background: #201830;
+}
+.newsletter__bg-decor-left {
+  position: absolute;
+  left: 35px;
+  bottom: 45px;
+}
+.newsletter__bg-decor-center {
+  position: absolute;
+  top: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.newsletter__bg-decor-right {
+  position: absolute;
+  right: 27px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.newsletter__heading {
+  position: relative;
+  color: #FFF;
+  z-index: 1;
+}
+.newsletter__heading-wrap {
+  position: relative;
+}
+.newsletter__heading-decor {
+  position: absolute;
+  bottom: -8px;
+  left: -5px;
+}
+.newsletter-bottom {
+  margin-top: 70px;
 }
 
 /*# sourceMappingURL=main.css.map */

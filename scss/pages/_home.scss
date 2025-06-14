@@ -730,14 +730,16 @@
 // Testimonial
 /* Testimonial */
 .testimonial{
-    margin-top: 160px;
+    padding-top: 160px;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+
 
     &::after{
         position: absolute;
-        top: 0;
+        top: 50%;
         right: -120px;
+        transform: translateY(-50%);
         content: "";
         display: inline-block;
         width: 287px;
@@ -789,6 +791,10 @@
         }
     }
 
+    &__content{
+        padding-top: 56px;
+    }
+
     &__heading{
         @extend %h2;
 
@@ -818,5 +824,65 @@
         @extend %p3;
 
         color: #ABA6B5;
+    }
+}
+
+// Newsletter
+/* Newsletter */
+.newsletter{
+
+    &__inner{
+        position: relative;
+        margin-top: 160px;
+        padding: 100px 0;
+        border-radius: 12px;
+        background: #{var.$primary-color-heading};
+    }
+
+    &__bg-decor-left{
+        position: absolute;
+        left: 35px;
+        bottom: 45px;
+    }
+
+    &__bg-decor-center{
+        position: absolute;
+        top: 26px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__bg-decor-right{
+        position: absolute;
+        right: 27px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__heading{
+        @extend %h2;
+        position: relative;
+        color: #{var.$primary-color-btn-text};
+        z-index: 1;
+
+
+        &-wrap{
+            position: relative;
+        }
+
+        &-decor{
+            position: absolute;
+            bottom: -8px;
+            left: -5px;
+        }
+    }
+
+    &__desc{
+        @extend %p2;
+
+    }
+
+    &-bottom{
+        margin-top: 70px;
     }
 }

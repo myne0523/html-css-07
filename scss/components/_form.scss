@@ -1,1 +1,28 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mixins;
 // _form.scss
+.subscribe__form{
+
+    .row__inner{
+            align-items: center;
+        }
+    }
+
+.subscribe__input{
+    width: 100%;
+    padding: 18px 0 18px 28px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: #2B213F;
+
+    &::placeholder{
+            @extend %p2;
+        }
+
+    &:focus {
+            outline: none;
+            border-color: #6c9eff;
+            box-shadow: 0 0 0 1px #6c9eff;
+        }
+    }
