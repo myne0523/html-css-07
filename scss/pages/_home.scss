@@ -3,16 +3,32 @@
 @use "../base/typography" ;
 
 // _home.scss
+.show-on-desktop {
+  @include mixins.show(desktop);
+}
+
+.show-on-mobile {
+  @include mixins.show(mobile);
+}
 // Hero
 /* Hero */
+
 .hero{
     padding: 110px 0 158px 0;
     background: #{var.$primary-color-bg};
+
+    @include mixins.respond(md){
+        padding-bottom: 32px;
+    }
 }
 
 .hero__media{
     position: relative;
     @include mixins.flex($column-gap:30px);
+
+    @include mixins.respond(md){
+        width: 100%;
+    }
 }
 
 .hero__thumb-left{
@@ -24,26 +40,49 @@
             width: 270px;
             height: 302px;
             object-fit: cover;
+
+            @include mixins.respond(md){
+                width: 160.188px;
+                height: 179.173px;
+                object-fit: cover;
+            }
         }
 
         .hero__play-audio{
             position: absolute;
             bottom: -30px;
-            left: 38px;
+            left: 50%;
+            transform: translateX(-50%);
             width: 194px;
             height: 60px;
             object-fit: cover;
+
+            @include mixins.respond(md){
+                width: 115.098px;
+                height: 35.597px;
+                object-fit: cover;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -15px;
+            }
         }
     }
 }
 
 .hero__group{
     margin-top: 55px;
+    @include mixins.respond(md){
+        margin-top: 34px;
+    }
 
     &-desc{
         @extend %text-btn-3;
         text-align: start;
         color: #{var.$primary-color-heading};
+
+        @include mixins.respond(md){
+            font-size: 0.8rem;
+        }
     }
 
     &-avt{
@@ -54,8 +93,18 @@
             height: 48px;
             object-fit: cover;
 
+            @include mixins.respond(md){
+                width: 28px;
+                height: 28px;
+            }
+
             &-wrap{
             @include mixins.flex(center,center);
+            @include mixins.respond(md){
+                width: 28px;
+                height: 28px;
+                margin-left: -10px;
+            }
 
             width: 48px;
             height: 48px;
@@ -69,12 +118,19 @@
                 font-size: 1.2rem;
                 font-weight: 600;
                 line-height: 1.83;
+
+                @include mixins.respond(md){
+                    font-size: 0.7rem;
+                }
             }
         }
         }
 
         .hero__avt+.hero__avt{
             margin-left: -15px;
+            @include mixins.respond(md){
+                margin-left: -10px;
+            }
         }
     }
 }
@@ -86,23 +142,39 @@
         .hero__icon{
         @include mixins.flex($align:center,$column-gap:18px);
         padding-bottom: 28px;
+        @include mixins.respond(md){
+            padding-bottom: 16px;
+        }
 
         &-1{
             width: 24px;
             height: 24px;
             object-fit: cover;
+
+            @include mixins.respond(md){
+                width: 16px;
+                height: 16px;
+            }
         }
 
         &-2{
             width: 24px;
             height: 24px;
             object-fit: cover;
+            @include mixins.respond(md){
+                width: 16px;
+                height: 16px;
+            }
         }
 
         &-3{
             width: 24px;
             height: 24px;
             object-fit: cover;
+            @include mixins.respond(md){
+                width: 16px;
+                height: 16px;
+            }
         }
     }
 
@@ -110,6 +182,11 @@
         width: 270px;
         height: 302px;
         object-fit: cover;
+
+        @include mixins.respond(md){
+            width: 160.188px;
+            height: 179.173px;
+        }
     }
 }
 
@@ -120,16 +197,31 @@
         position: absolute;
         top: -45px;
         left: 55px;
+
+        @include mixins.respond(md){
+            top: -36px;
+            left: 20px;
+        }
     }
     .hero__decor-2{
         position: absolute;
         bottom: -35px;
         right: 95px;
+
+        @include mixins.respond(md){
+            bottom: -10px;
+            right: 20px;
+        }
     }
 }
 
 .hero__decor_circle-wrap{
     @include mixins.flex(center,center);
+    @include mixins.respond(md){
+        width: 48px;
+        height: 48px;
+        margin-left: 70px;
+    }
 
     width: 82px;
     height: 82px;
@@ -143,6 +235,10 @@
         font-size: 1rem;
         font-weight: 500;
 
+        @include mixins.respond(md){
+            font-size: 0.6rem;
+        }
+
         .value{
             display: inline-block;
             margin-bottom: 4px;
@@ -150,6 +246,10 @@
             text-align: center;
             font-size: 1.4rem;
             font-weight: 800;
+
+            @include mixins.respond(md){
+                font-size: 0.8rem;
+            }
         }
     }
 }
@@ -158,35 +258,58 @@
 .hero__thumb-card{
     position: absolute;
     bottom: 16px;
-    left: 38px;
-    padding:14px 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 194px;
+    padding:14px 0;
     border-radius: 9px;
     text-align: center;
     background: rgba(255, 255, 255, 0.40);
     box-shadow: 0px 12px 44px 0px rgba(0, 0, 0, 0.07);
     backdrop-filter: blur(5px);
 
+    @include mixins.respond(md){
+        min-width: 116px;
+        padding: 8px 0;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 9px;
+    }
+
     .singer-name{
         margin-bottom: 6px;
         color: #{var.$primary-color-heading};
         font-size: 1.4rem;
         font-weight: 600;
+
+        @include mixins.respond(md){
+            font-size: 0.8rem;
+        }
     }
 
     .name-song{
         color: #{var.$primary-color-desc};
         font-size: 1.2rem;
         font-weight: 400;
+
+        @include mixins.respond(md){
+            font-size: 0.7rem;
+        }
     }
 }
 
 .hero__content{
     margin-top: 20px;
+    @include mixins.respond(md){
+        width: 100%;
+        margin-top: 40px;
+    }
 }
 
 
 
 .hero__heading{
+
     &-wrap{
     display: inline-block;
     position: relative;
@@ -197,11 +320,21 @@
     @extend %h1;
     z-index: 2;
 
+    @include mixins.respond(md){
+        font-size: 3.6rem;
+        margin-bottom: 12px;
+    }
+
     
     &-decor{
         position: absolute;
         left: 33px;
         bottom: 75px;
+
+        @include mixins.respond(md){
+            left: 0;
+            bottom: 0;
+        }
     }
 }
 
@@ -209,6 +342,11 @@
 .hero__desc{
     margin-bottom: 40px;
     @extend %p1;
+
+    @include mixins.respond(md){
+        font-size: 1.4rem;
+        margin-bottom: 30px;
+    }
 }
 
 .hero__cta{

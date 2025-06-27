@@ -1,5 +1,8 @@
 @use "../abstracts/variables" as var;
 @use "../base/typography" as typ;
+@use "sass:math";
+@use "sass:map";
+
 // _mixins.scss
 @mixin flex($justify: flex-start, $align: flex-start, $direction: row, $column-gap: 0) {
   display: flex;
@@ -30,5 +33,37 @@
 
   &:hover {
     opacity: 0.5;
+  }
+}
+
+@mixin respond($breakpoint) {
+  $value: map.get(var.$grid-breakpoints, $breakpoint);
+
+  @if $value == null {
+    $value: map.get(var.$grid-breakpoints, lg); // fallback nếu sai
+  }
+
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+
+@mixin show($mode) {
+  @if $mode == mobile {
+    display: none;
+
+    @include respond(lg) {
+      display: none;
+    }
+
+    @include respond(md) {
+      display: block;
+    }
+  }
+
+  @else if $mode == desktop {
+    @include respond(md) {
+      display: none;
+    }
   }
 }

@@ -1258,10 +1258,35 @@ a {
   box-shadow: 0 0 0 1px #6c9eff;
 }
 
+@media screen and (max-width: 768px) {
+  .show-on-desktop {
+    display: none;
+  }
+}
+
+.show-on-mobile {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .show-on-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .show-on-mobile {
+    display: block;
+  }
+}
+
 /* Hero */
 .hero {
   padding: 110px 0 158px 0;
   background: #FFF8F3;
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    padding-bottom: 32px;
+  }
 }
 
 .hero__media {
@@ -1272,6 +1297,11 @@ a {
   align-items: flex-start;
   column-gap: 30px;
 }
+@media screen and (max-width: 768px) {
+  .hero__media {
+    width: 100%;
+  }
+}
 
 .hero__thumb-left-wrap {
   position: relative;
@@ -1281,21 +1311,49 @@ a {
   height: 302px;
   object-fit: cover;
 }
+@media screen and (max-width: 768px) {
+  .hero__thumb-left-wrap .hero__thumb {
+    width: 160.188px;
+    height: 179.173px;
+    object-fit: cover;
+  }
+}
 .hero__thumb-left-wrap .hero__play-audio {
   position: absolute;
   bottom: -30px;
-  left: 38px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 194px;
   height: 60px;
   object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .hero__thumb-left-wrap .hero__play-audio {
+    width: 115.098px;
+    height: 35.597px;
+    object-fit: cover;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+  }
 }
 
 .hero__group {
   margin-top: 55px;
 }
+@media screen and (max-width: 768px) {
+  .hero__group {
+    margin-top: 34px;
+  }
+}
 .hero__group-desc {
   text-align: start;
   color: #201830;
+}
+@media screen and (max-width: 768px) {
+  .hero__group-desc {
+    font-size: 0.8rem;
+  }
 }
 .hero__group-avt {
   display: flex;
@@ -1309,6 +1367,12 @@ a {
   height: 48px;
   object-fit: cover;
 }
+@media screen and (max-width: 768px) {
+  .hero__group-avt .hero__avt {
+    width: 28px;
+    height: 28px;
+  }
+}
 .hero__group-avt .hero__avt-wrap {
   display: flex;
   flex-direction: row;
@@ -1321,6 +1385,13 @@ a {
   border-radius: 50%;
   background: #201830;
 }
+@media screen and (max-width: 768px) {
+  .hero__group-avt .hero__avt-wrap {
+    width: 28px;
+    height: 28px;
+    margin-left: -10px;
+  }
+}
 .hero__group-avt .hero__avt-wrap .hero__value {
   color: #FFF;
   text-align: center;
@@ -1328,8 +1399,18 @@ a {
   font-weight: 600;
   line-height: 1.83;
 }
+@media screen and (max-width: 768px) {
+  .hero__group-avt .hero__avt-wrap .hero__value {
+    font-size: 0.7rem;
+  }
+}
 .hero__group-avt .hero__avt + .hero__avt {
   margin-left: -15px;
+}
+@media screen and (max-width: 768px) {
+  .hero__group-avt .hero__avt + .hero__avt {
+    margin-left: -10px;
+  }
 }
 
 .hero__thumb-right {
@@ -1344,25 +1425,54 @@ a {
   column-gap: 18px;
   padding-bottom: 28px;
 }
+@media screen and (max-width: 768px) {
+  .hero__thumb-right .hero__icon {
+    padding-bottom: 16px;
+  }
+}
 .hero__thumb-right .hero__icon-1 {
   width: 24px;
   height: 24px;
   object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .hero__thumb-right .hero__icon-1 {
+    width: 16px;
+    height: 16px;
+  }
 }
 .hero__thumb-right .hero__icon-2 {
   width: 24px;
   height: 24px;
   object-fit: cover;
 }
+@media screen and (max-width: 768px) {
+  .hero__thumb-right .hero__icon-2 {
+    width: 16px;
+    height: 16px;
+  }
+}
 .hero__thumb-right .hero__icon-3 {
   width: 24px;
   height: 24px;
   object-fit: cover;
 }
+@media screen and (max-width: 768px) {
+  .hero__thumb-right .hero__icon-3 {
+    width: 16px;
+    height: 16px;
+  }
+}
 .hero__thumb-right .hero__thumb {
   width: 270px;
   height: 302px;
   object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .hero__thumb-right .hero__thumb {
+    width: 160.188px;
+    height: 179.173px;
+  }
 }
 
 .hero__decor-wrap {
@@ -1373,10 +1483,22 @@ a {
   top: -45px;
   left: 55px;
 }
+@media screen and (max-width: 768px) {
+  .hero__decor-wrap .hero__decor-1 {
+    top: -36px;
+    left: 20px;
+  }
+}
 .hero__decor-wrap .hero__decor-2 {
   position: absolute;
   bottom: -35px;
   right: 95px;
+}
+@media screen and (max-width: 768px) {
+  .hero__decor-wrap .hero__decor-2 {
+    bottom: -10px;
+    right: 20px;
+  }
 }
 
 .hero__decor_circle-wrap {
@@ -1391,11 +1513,23 @@ a {
   border-radius: 50%;
   background: #FF9051;
 }
+@media screen and (max-width: 768px) {
+  .hero__decor_circle-wrap {
+    width: 48px;
+    height: 48px;
+    margin-left: 70px;
+  }
+}
 .hero__decor_circle-wrap .hero__decor_circle-text {
   color: #FFEFE7;
   text-align: center;
   font-size: 1rem;
   font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .hero__decor_circle-wrap .hero__decor_circle-text {
+    font-size: 0.6rem;
+  }
 }
 .hero__decor_circle-wrap .hero__decor_circle-text .value {
   display: inline-block;
@@ -1405,17 +1539,33 @@ a {
   font-size: 1.4rem;
   font-weight: 800;
 }
+@media screen and (max-width: 768px) {
+  .hero__decor_circle-wrap .hero__decor_circle-text .value {
+    font-size: 0.8rem;
+  }
+}
 
 .hero__thumb-card {
   position: absolute;
   bottom: 16px;
-  left: 38px;
-  padding: 14px 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 194px;
+  padding: 14px 0;
   border-radius: 9px;
   text-align: center;
   background: rgba(255, 255, 255, 0.4);
   box-shadow: 0px 12px 44px 0px rgba(0, 0, 0, 0.07);
   backdrop-filter: blur(5px);
+}
+@media screen and (max-width: 768px) {
+  .hero__thumb-card {
+    min-width: 116px;
+    padding: 8px 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 9px;
+  }
 }
 .hero__thumb-card .singer-name {
   margin-bottom: 6px;
@@ -1423,14 +1573,30 @@ a {
   font-size: 1.4rem;
   font-weight: 600;
 }
+@media screen and (max-width: 768px) {
+  .hero__thumb-card .singer-name {
+    font-size: 0.8rem;
+  }
+}
 .hero__thumb-card .name-song {
   color: #665F73;
   font-size: 1.2rem;
   font-weight: 400;
 }
+@media screen and (max-width: 768px) {
+  .hero__thumb-card .name-song {
+    font-size: 0.7rem;
+  }
+}
 
 .hero__content {
   margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .hero__content {
+    width: 100%;
+    margin-top: 40px;
+  }
 }
 
 .hero__heading {
@@ -1442,14 +1608,32 @@ a {
   display: inline-block;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .hero__heading {
+    font-size: 3.6rem;
+    margin-bottom: 12px;
+  }
+}
 .hero__heading-decor {
   position: absolute;
   left: 33px;
   bottom: 75px;
 }
+@media screen and (max-width: 768px) {
+  .hero__heading-decor {
+    left: 0;
+    bottom: 0;
+  }
+}
 
 .hero__desc {
   margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .hero__desc {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+  }
 }
 
 .hero__cta {

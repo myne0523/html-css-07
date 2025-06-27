@@ -7,3 +7,11 @@ $primary-color-desc: #665F73;
 $primary-color-btn-text: #FFF;
 $font-family-body:"Plus Jakarta Sans";
 $height-btn:64px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
