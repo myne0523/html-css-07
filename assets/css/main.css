@@ -1675,23 +1675,63 @@ a {
 .feature {
   margin-top: 160px;
 }
+@media screen and (max-width: 768px) {
+  .feature .row {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .feature .row .under {
+    margin-top: 38px;
+    order: 2;
+  }
+}
+@media screen and (max-width: 768px) {
+  .feature .row .upper {
+    order: 1;
+  }
+}
 .feature__heading-wrap {
   position: relative;
   width: 470px;
   padding-bottom: 12px;
   margin-bottom: 18px;
 }
+@media screen and (max-width: 768px) {
+  .feature__heading-wrap {
+    width: 339px;
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+  }
+}
 .feature__heading-decor {
   position: absolute;
   right: 61px;
   bottom: 0;
 }
+@media screen and (max-width: 768px) {
+  .feature__heading-decor {
+    left: 0;
+  }
+}
 .feature__heading {
   position: relative;
   z-index: 2;
 }
+@media screen and (max-width: 768px) {
+  .feature__heading {
+    font-size: 2.6rem;
+  }
+}
 .feature__desc {
   margin-bottom: 38px;
+}
+@media screen and (max-width: 768px) {
+  .feature__desc {
+    font-size: 1.4rem;
+    margin-bottom: 28px;
+  }
 }
 .feature__btn__content {
   display: flex;
@@ -1729,6 +1769,19 @@ a {
   filter: blur(129px);
   z-index: -1;
 }
+@media screen and (max-width: 768px) {
+  .feature .media::after {
+    width: 176px;
+    height: 176px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .feature .media {
+    width: 100%;
+    min-height: 238px;
+    order: 1;
+  }
+}
 .feature-icon-1 {
   position: absolute;
   top: 50%;
@@ -1738,6 +1791,12 @@ a {
   height: 80px;
   object-fit: cover;
 }
+@media screen and (max-width: 768px) {
+  .feature-icon-1 {
+    width: 48px;
+    height: 48px;
+  }
+}
 .feature-icon-2 {
   position: absolute;
   top: 0;
@@ -1745,6 +1804,12 @@ a {
   width: 148px;
   height: 148px;
   object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .feature-icon-2 {
+    width: 89px;
+    height: 89px;
+  }
 }
 .feature-icon-3 {
   position: absolute;
@@ -1754,6 +1819,13 @@ a {
   height: 126px;
   object-fit: cover;
 }
+@media screen and (max-width: 768px) {
+  .feature-icon-3 {
+    width: 75px;
+    height: 75px;
+    left: 20%;
+  }
+}
 .feature-icon-4 {
   position: absolute;
   bottom: 30px;
@@ -1762,6 +1834,14 @@ a {
   height: 138px;
   object-fit: cover;
 }
+@media screen and (max-width: 768px) {
+  .feature-icon-4 {
+    width: 82px;
+    height: 82px;
+    right: 30%;
+    bottom: 24px;
+  }
+}
 .feature-icon-5 {
   position: absolute;
   top: 51px;
@@ -1769,6 +1849,12 @@ a {
   width: 100px;
   height: 100px;
   object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .feature-icon-5 {
+    width: 100px;
+    height: 100px;
+  }
 }
 .feature__gallery {
   margin-top: 160px;

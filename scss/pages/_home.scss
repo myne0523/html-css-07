@@ -381,28 +381,66 @@
 .feature{
     margin-top: 160px;
 
+    .row{
+        @include mixins.respond(md){
+        display: flex;
+        flex-direction: column;
+        }
+
+        .under{
+            @include mixins.respond(md){
+                margin-top: 38px;
+                order: 2;
+            }
+        }
+
+        .upper{
+            @include mixins.respond(md){
+                order: 1;
+            }
+        }
+    }
+
     &__heading-wrap{
         position: relative;
         width: 470px;
         padding-bottom: 12px;
         margin-bottom: 18px;
+
+        @include mixins.respond(md){
+            width: 339px;
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+        }
     }
 
     &__heading-decor{
         position: absolute;
         right: 61px;
         bottom: 0;
+
+        @include mixins.respond(md){
+            left: 0;
+        }
     }
 
     &__heading{
         @extend %h2;
         position: relative;
         z-index: 2;
+        @include mixins.respond(md){
+            font-size: 2.6rem;
+        }
     }
 
     &__desc{
         @extend %p2;
         margin-bottom: 38px;
+
+        @include mixins.respond(md){
+            font-size: 1.4rem;
+            margin-bottom: 28px;
+        }
     }
 
     &__btn__content{
@@ -434,6 +472,17 @@
             background: rgba(255, 144, 81, 0.4);
             filter: blur(129px);
             z-index: -1;
+
+            @include mixins.respond(md){
+                width: 176px;
+                height: 176px;
+            }
+        }
+
+        @include mixins.respond(md){
+            width: 100%;
+            min-height: 238px;
+            order: 1;
         }
     }
 
@@ -445,6 +494,11 @@
         width: 80px;
         height: 80px;
         object-fit: cover;
+
+        @include mixins.respond(md){
+            width: 48px;
+            height: 48px;
+        }
     }
 
     &-icon-2{
@@ -454,6 +508,11 @@
         width: 148px;
         height: 148px;
         object-fit: cover;
+
+        @include mixins.respond(md){
+            width: 89px;
+            height: 89px;
+        }
     }
 
     &-icon-3{
@@ -463,6 +522,12 @@
         width: 126px;
         height: 126px;
         object-fit: cover;
+
+        @include mixins.respond(md){
+            width: 75px;
+            height: 75px;
+            left: 20%;
+        }
     }
 
     &-icon-4{
@@ -471,7 +536,14 @@
         right: 15%;
         width: 138px;
         height: 138px;
-        object-fit: cover; 
+        object-fit: cover;
+        
+        @include mixins.respond(md){
+            width: 82px;
+            height: 82px;
+            right: 30%;
+            bottom: 24px;
+        }
     }
 
     &-icon-5{
@@ -480,7 +552,12 @@
         right: 0;
         width: 100px;
         height: 100px;
-        object-fit: cover; 
+        object-fit: cover;
+        
+        @include mixins.respond(md){
+            width: 100px;
+            height: 100px;
+        }
     }
 
     &__gallery{
