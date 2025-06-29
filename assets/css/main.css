@@ -107,7 +107,7 @@ a {
   line-height: 1.5;
 }
 
-.hero__link, .feature__gallery .gallery__list .education__card-heading, .feature__gallery .gallery__list .healthcare__card-heading, .feature__gallery .gallery__list .music__card-heading, .feature__gallery .gallery__list .fashion__card-heading, .feature__gallery .gallery__list .comedy__card-heading, .hero__btn, .feature__btn, .gallery__btn, .popular__btn, .subscribe__btn {
+.hero__link, .feature__gallery .gallery__list .education__card-heading, .feature__gallery .gallery__list .healthcare__card-heading, .feature__gallery .gallery__list .music__card-heading, .feature__gallery .gallery__list .fashion__card-heading, .feature__gallery .gallery__list .comedy__card-heading, .hero__btn, .feature__btn, .gallery__btn, .popular__btn, .popular__btn__mobile, .subscribe__btn {
   color: #FFF;
   font-size: 1.8rem;
   font-weight: 600;
@@ -1202,7 +1202,7 @@ a {
   opacity: 0.5;
 }
 
-.popular__btn {
+.popular__btn, .popular__btn__mobile {
   --height:64px;
   --width:157px;
   --primary-color-btn:#201830;
@@ -1216,7 +1216,7 @@ a {
   color: #FFF;
   background: var(--primary-color-btn);
 }
-.popular__btn:hover {
+.popular__btn:hover, .popular__btn__mobile:hover {
   opacity: 0.5;
 }
 
@@ -1860,6 +1860,11 @@ a {
   margin-top: 160px;
 }
 @media screen and (max-width: 768px) {
+  .feature__gallery {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
   .feature__gallery .content .feature__heading-wrap {
     width: 234px;
     padding-bottom: 6px;
@@ -2166,12 +2171,29 @@ a {
   width: 390px;
   padding-bottom: 0;
 }
+@media screen and (max-width: 768px) {
+  .feature__popular-top .feature__heading-wrap {
+    width: 339px;
+    padding-bottom: 6px;
+  }
+}
 .feature__popular-top .feature__heading-decor {
   right: 45px;
   bottom: 45px;
 }
+@media screen and (max-width: 768px) {
+  .feature__popular-top .feature__heading-decor {
+    left: 0;
+    bottom: 0;
+  }
+}
 .feature__popular-bottom {
   margin-top: 84px;
+}
+@media screen and (max-width: 768px) {
+  .feature__popular-bottom {
+    margin-top: 38px;
+  }
 }
 .feature__popular-bottom .episode__thumb {
   width: 100%;
@@ -2180,15 +2202,38 @@ a {
 .feature__popular-bottom .episode__content {
   padding: 30px 0;
 }
+@media screen and (max-width: 768px) {
+  .feature__popular-bottom .episode__content {
+    padding: 18px 0;
+  }
+}
 .feature__popular-bottom .episode__sub-title {
   color: #FF9051;
   margin-bottom: 6px;
 }
+@media screen and (max-width: 768px) {
+  .feature__popular-bottom .episode__sub-title {
+    font-size: 1rem;
+    margin-bottom: 7px;
+  }
+}
 .feature__popular-bottom .episode__title {
   margin-bottom: 18px;
 }
+@media screen and (max-width: 768px) {
+  .feature__popular-bottom .episode__title {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+}
 .feature__popular-bottom .episode__desc {
   margin-bottom: 11px;
+}
+@media screen and (max-width: 768px) {
+  .feature__popular-bottom .episode__desc {
+    font-size: 1rem;
+    margin-bottom: 7px;
+  }
 }
 .feature__popular-bottom .episode__cta {
   display: flex;
@@ -2199,6 +2244,12 @@ a {
   cursor: pointer;
   transition: all 0.25s ease;
 }
+@media screen and (max-width: 768px) {
+  .feature__popular-bottom .episode__cta .play-icon-wrap {
+    width: 10px;
+    height: 10px;
+  }
+}
 .feature__popular-bottom .episode__cta:hover .play-icon-wrap {
   background: #936CDD;
 }
@@ -2207,6 +2258,11 @@ a {
 }
 .feature__popular-bottom .episode__link {
   color: #201830;
+}
+@media screen and (max-width: 768px) {
+  .feature__popular-bottom .episode__link {
+    font-size: 1rem;
+  }
 }
 .feature__popular-bottom .row__below {
   margin-top: 30px;
@@ -2221,6 +2277,11 @@ a {
   margin-top: 58px;
   cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+  .dots {
+    margin-top: 18px;
+  }
+}
 
 .dot {
   width: 8px;
@@ -2233,6 +2294,10 @@ a {
   height: 12px;
   border-radius: 50%;
   background: #936CDD;
+}
+
+.popular__btn__mobile {
+  margin-top: 38px;
 }
 
 /* Testimonial */

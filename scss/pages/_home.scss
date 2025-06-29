@@ -566,6 +566,9 @@
 
     &__gallery{
         margin-top: 160px;
+        @include mixins.respond(md){
+            margin-top: 100px;
+        }
 
         .content{
 
@@ -895,17 +898,30 @@
                 &-wrap{
                     width: 390px;
                     padding-bottom: 0;
+
+                    @include mixins.respond(md){
+                        width: 339px;
+                        padding-bottom: 6px;
+                    }
                 }
                 
                 &-decor{
                     right: 45px;
                     bottom: 45px;
+
+                    @include mixins.respond(md){
+                        left: 0;
+                        bottom: 0;
+                    }
                 }
             }
         }
 
         &-bottom{
             margin-top: 84px;
+            @include mixins.respond(md){
+                margin-top: 38px;
+            }
 
             .episode{
                 &__thumb{
@@ -915,6 +931,10 @@
 
                 &__content{
                     padding: 30px 0;
+
+                    @include mixins.respond(md){
+                        padding: 18px 0;
+                    }
                 }
 
                 &__sub-title{
@@ -922,24 +942,46 @@
                 
                 color: #{var.$primary-color-decor};
                 margin-bottom: 6px;
+
+                @include mixins.respond(md){
+                        font-size: 1rem;
+                        margin-bottom: 7px;
+                    }
                 }
 
                 &__title{
                     @extend %h3;
 
                     margin-bottom: 18px;
+
+                    @include mixins.respond(md){
+                        font-size: 1.2rem;
+                        margin-bottom: 12px;
+                    }
                 }
 
                 &__desc{
                     @extend %p2;
 
                     margin-bottom: 11px;
+
+                    @include mixins.respond(md){
+                        font-size: 1rem;
+                        margin-bottom: 7px;
+                    }
                 }
 
                 &__cta{
                     @include mixins.flex($align:center,$column-gap:6px);
                     cursor: pointer;
                     transition: all .25s ease;
+
+                    .play-icon-wrap{
+                        @include mixins.respond(md){
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
 
                     &:hover .play-icon-wrap{
                         background: #{var.$primary-color-btn};
@@ -953,6 +995,10 @@
                 &__link{
                     @extend %text-btn-3;
                     color: #{var.$primary-color-heading};
+
+                    @include mixins.respond(md){
+                        font-size: 1rem;
+                    }
                 }
             }
 
@@ -968,6 +1014,10 @@
 
     margin-top: 58px;
     cursor: pointer;
+
+    @include mixins.respond(md){
+        margin-top: 18px;
+    }
 }
 
 .dot{
@@ -982,6 +1032,10 @@
         border-radius: 50%;
         background: #{var.$primary-color-btn};
     }
+}
+
+.popular__btn__mobile{
+    margin-top: 38px;
 }
 
 // Testimonial

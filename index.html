@@ -259,7 +259,7 @@
                                                 </a>
                                             </div>
                                         </div> 
-                                        <div class="col-lg-4 col-10 offset-1"> 
+                                        <div class="col-lg-4 offset-lg-0 col-10 offset-1"> 
                                             <!-- Music -->
                                             <div class="music__card">
                                                 <img src="./assets/img/feature-gallery-sm-1.png" alt="" class="music__card-thumb">
@@ -279,7 +279,7 @@
                                     </div>
 
                                     <div class="row">
-                                            <div class="col-4 col-10 offset-1"> 
+                                            <div class="col-lg-4 offset-lg-0 col-10 offset-1"> 
                                                 <!-- Fashion -->
                                                  <div class="fashion__card">
                                                     <img src="./assets/img/feature-gallery-sm-2.png" alt="" class="fashion__card-thumb">
@@ -296,7 +296,7 @@
                                                     </a>
                                                 </div> 
                                             </div>
-                                            <div class="col-8 col-12"> 
+                                            <div class="col-lg-8 col-12"> 
                                                 <!-- Comedy --> 
                                                 <div class="comedy__card">
                                                     <img src="./assets/img/feature-gallery-md-2.png" alt="" class="comedy__card-thumb">
@@ -331,25 +331,28 @@
                     <div class="feature__heading-wrap">
                         <div class="feature__heading">Our most popular episodes</div>
                         <div class="feature__heading-decor">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="143" height="21" viewBox="0 0 143 21" fill="none">
+                            <svg class="show-on-desktop" xmlns="http://www.w3.org/2000/svg" width="143" height="21" viewBox="0 0 143 21" fill="none">
                                 <path d="M2 4C22.7661 13.8101 79.6387 27.5443 141 4" stroke="#936CDD" stroke-width="8"/>
+                            </svg>
+                            <svg class="show-on-mobile" xmlns="http://www.w3.org/2000/svg" width="107" height="20" viewBox="0 0 107 20" fill="none">
+                                <path d="M2 2C17.3878 14.074 59.5308 30.9775 105 2" stroke="#936CDD" stroke-width="4"/>
                             </svg>
                         </div>
                     </div>
-                    <a href="#!" class="popular__btn">All episodes</a>
+                    <a href="#!" class="popular__btn show-on-desktop">All episodes</a>
                 </div>
                         
                 <div class="feature__popular-bottom">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-12">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-6">
                                     <div class="episode__thumb-wrap">
                                         <img src="./assets/img/popular-episode-1.png" alt="" class="episode__thumb">
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 col-6">
                                     <div class="episode__content">
                                         <p class="episode__sub-title">Episode3 - 1hr 25min</p>
                                         <h3 class="episode__title">Should you get outboard audio gear?</h3>
@@ -357,7 +360,10 @@
                                         <div class="episode__cta">
                                             <a href="#!" class="episode__link">Listen now</a>
                                             <a href="#!" class="play-icon-wrap">
-                                                <svg width="8" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <svg class="show-on-desktop" width="8" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5.85 3.9134C5.91667 3.95189 5.91667 4.04811 5.85 4.0866L0.15 7.3775C0.083333 7.41599 0 7.36788 0 7.2909L0 0.709103C0 0.632123 0.0833335 0.584011 0.15 0.622501L5.85 3.9134Z" fill="white"/>
+                                                </svg>
+                                                <svg class="show-on-mobile" width="4" height="4" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M5.85 3.9134C5.91667 3.95189 5.91667 4.04811 5.85 4.0866L0.15 7.3775C0.083333 7.41599 0 7.36788 0 7.2909L0 0.709103C0 0.632123 0.0833335 0.584011 0.15 0.622501L5.85 3.9134Z" fill="white"/>
                                                 </svg>
                                             </a>
@@ -367,7 +373,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 show-on-desktop">
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="episode__thumb-wrap">
@@ -394,7 +400,7 @@
                         </div>
                     </div>
 
-                    <div class="row row__below">
+                    <div class="row row__below show-on-desktop">
                         <div class="col-lg-6">
                             <div class="row">
                                 <div class="col-lg-6">
@@ -452,6 +458,12 @@
                     <div class="dot dot__active"></div>
                     <div class="dot"></div>
                     <div class="dot"></div>
+                </div>
+
+                <div class="row show-on-mobile popular__cta-mobile">
+                    <div class="col-6">
+                        <a href="#!" class="popular__btn__mobile">All episodes</a>
+                    </div>
                 </div>
             </div>
         </section>

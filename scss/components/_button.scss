@@ -17,7 +17,7 @@
     @include mixins.btn(64px,157px,#201830,8px,text-btn-1);
 }
 
-.popular__btn{
+.popular__btn, .popular__btn__mobile{
     @include mixins.btn(64px,157px,#201830,8px,text-btn-1);
 }
 
