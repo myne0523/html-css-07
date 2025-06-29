@@ -414,14 +414,18 @@
         }
     }
 
+    &__intro{
+        .feature__heading-decor{
+            @include mixins.respond(md){
+                left: 0;
+            }
+        }
+    }
+
     &__heading-decor{
         position: absolute;
         right: 61px;
         bottom: 0;
-
-        @include mixins.respond(md){
-            left: 0;
-        }
     }
 
     &__heading{
@@ -565,26 +569,57 @@
 
         .content{
 
+            .feature__heading-wrap{
+                @include mixins.respond(md){
+                    width: 234px;
+                    padding-bottom: 6px;
+                    margin: 0 auto 12px auto;
+                }
+            }
+
             .feature__heading{
                 text-align: center;
             }
 
             .feature__heading-decor{
-                right: 42px;
+                left: 0;
+
+                @include mixins.respond(md){
+                    left: unset;
+                    right: 0;
+                }
             }
 
             .feature__desc{
                 width: 470px;
                 text-align: center;
+
+                @include mixins.respond(md){
+                    width: 339px;
+                    margin: 0 auto 0 auto;
+                }
             }
         }
 
         .gallery__list{
             margin-top: 70px;
+            @include mixins.respond(md){
+                margin-top: 38px;
+            }
 
             .col-lg-8{
 
                 .row{
+                    margin-bottom: 30px;
+
+                    @include mixins.respond(md){
+                        margin-bottom: unset;
+                    }
+                }
+            }
+
+            .col-12, .col-10{
+                @include mixins.respond(md){
                     margin-bottom: 30px;
                 }
             }
@@ -592,6 +627,10 @@
             .education__card{
                 position: relative;
                 min-height: 600px;
+
+                @include mixins.respond(md){
+                    min-height: 550px;
+                }
 
                 &-thumb{
                     width: 100%;
@@ -837,6 +876,9 @@
             margin-top: 55px;
 
             @include mixins.flex(center);
+            @include mixins.respond(md){
+                margin-top: 8px;
+            }
         }
     }
 

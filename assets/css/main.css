@@ -1705,15 +1705,15 @@ a {
     margin-bottom: 12px;
   }
 }
+@media screen and (max-width: 768px) {
+  .feature__intro .feature__heading-decor {
+    left: 0;
+  }
+}
 .feature__heading-decor {
   position: absolute;
   right: 61px;
   bottom: 0;
-}
-@media screen and (max-width: 768px) {
-  .feature__heading-decor {
-    left: 0;
-  }
 }
 .feature__heading {
   position: relative;
@@ -1859,25 +1859,64 @@ a {
 .feature__gallery {
   margin-top: 160px;
 }
+@media screen and (max-width: 768px) {
+  .feature__gallery .content .feature__heading-wrap {
+    width: 234px;
+    padding-bottom: 6px;
+    margin: 0 auto 12px auto;
+  }
+}
 .feature__gallery .content .feature__heading {
   text-align: center;
 }
 .feature__gallery .content .feature__heading-decor {
-  right: 42px;
+  left: 0;
+}
+@media screen and (max-width: 768px) {
+  .feature__gallery .content .feature__heading-decor {
+    left: unset;
+    right: 0;
+  }
 }
 .feature__gallery .content .feature__desc {
   width: 470px;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .feature__gallery .content .feature__desc {
+    width: 339px;
+    margin: 0 auto 0 auto;
+  }
+}
 .feature__gallery .gallery__list {
   margin-top: 70px;
+}
+@media screen and (max-width: 768px) {
+  .feature__gallery .gallery__list {
+    margin-top: 38px;
+  }
 }
 .feature__gallery .gallery__list .col-lg-8 .row {
   margin-bottom: 30px;
 }
+@media screen and (max-width: 768px) {
+  .feature__gallery .gallery__list .col-lg-8 .row {
+    margin-bottom: unset;
+  }
+}
+@media screen and (max-width: 768px) {
+  .feature__gallery .gallery__list .col-12, .feature__gallery .gallery__list .col-10 {
+    margin-bottom: 30px;
+  }
+}
 .feature__gallery .gallery__list .education__card {
   position: relative;
   min-height: 600px;
+}
+@media screen and (max-width: 768px) {
+  .feature__gallery .gallery__list .education__card {
+    min-height: 550px;
+  }
 }
 .feature__gallery .gallery__list .education__card-thumb {
   width: 100%;
@@ -2105,6 +2144,11 @@ a {
   justify-content: center;
   align-items: flex-start;
   column-gap: 0;
+}
+@media screen and (max-width: 768px) {
+  .feature__gallery .cta {
+    margin-top: 8px;
+  }
 }
 .feature__popular {
   margin-top: 160px;
