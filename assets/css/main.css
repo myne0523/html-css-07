@@ -1675,23 +1675,6 @@ a {
 .feature {
   margin-top: 160px;
 }
-@media screen and (max-width: 768px) {
-  .feature .row {
-    display: flex;
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 768px) {
-  .feature .row .under {
-    margin-top: 38px;
-    order: 2;
-  }
-}
-@media screen and (max-width: 768px) {
-  .feature .row .upper {
-    order: 1;
-  }
-}
 .feature__heading-wrap {
   position: relative;
   width: 470px;
@@ -1708,6 +1691,13 @@ a {
 @media screen and (max-width: 768px) {
   .feature__intro .feature__heading-decor {
     left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .feature__intro .row {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 38px;
   }
 }
 .feature__heading-decor {
@@ -1874,12 +1864,8 @@ a {
 .feature__gallery .content .feature__heading {
   text-align: center;
 }
-.feature__gallery .content .feature__heading-decor {
-  left: 0;
-}
 @media screen and (max-width: 768px) {
   .feature__gallery .content .feature__heading-decor {
-    left: unset;
     right: 0;
   }
 }
@@ -2306,6 +2292,18 @@ a {
   position: relative;
   overflow-x: hidden;
 }
+@media screen and (max-width: 768px) {
+  .testimonial {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .testimonial .row {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 35px;
+  }
+}
 .testimonial::after {
   position: absolute;
   top: 50%;
@@ -2319,6 +2317,11 @@ a {
   background: rgba(255, 144, 81, 0.4);
   filter: blur(129px);
 }
+@media screen and (max-width: 768px) {
+  .testimonial::after {
+    display: none;
+  }
+}
 .testimonial__media {
   position: relative;
 }
@@ -2327,9 +2330,19 @@ a {
   bottom: 0;
   left: 75px;
 }
+@media screen and (max-width: 768px) {
+  .testimonial__media .dots {
+    left: 0;
+  }
+}
 .testimonial__thumb-layout {
   position: relative;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .testimonial__thumb-layout .row {
+    row-gap: 0;
+  }
 }
 .testimonial__thumb-left {
   position: absolute;
@@ -2354,9 +2367,19 @@ a {
 .testimonial__content {
   padding-top: 56px;
 }
+@media screen and (max-width: 768px) {
+  .testimonial__heading {
+    font-size: 2.6rem;
+  }
+}
 .testimonial__heading-wrap {
   position: relative;
   margin-bottom: 38px;
+}
+@media screen and (max-width: 768px) {
+  .testimonial__heading-wrap {
+    margin-bottom: 12px;
+  }
 }
 .testimonial__heading-decor-1 {
   margin-bottom: 18px;
@@ -2367,8 +2390,24 @@ a {
   right: 55px;
   z-index: -1;
 }
+@media screen and (max-width: 768px) {
+  .testimonial__heading-decor-2 {
+    right: 36%;
+    top: 30%;
+  }
+}
 .testimonial__desc {
   margin-bottom: 18px;
+}
+@media screen and (max-width: 768px) {
+  .testimonial__desc {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .testimonial__desc {
+    margin-bottom: 12px;
+  }
 }
 .testimonial__name {
   color: #ABA6B5;
@@ -2382,10 +2421,22 @@ a {
   border-radius: 12px;
   background: #201830;
 }
+@media screen and (max-width: 768px) {
+  .newsletter__inner {
+    width: 100%;
+  }
+}
 .newsletter__bg-decor-left {
   position: absolute;
   left: 35px;
   bottom: 45px;
+}
+@media screen and (max-width: 768px) {
+  .newsletter__bg-decor-left {
+    right: 60px;
+    bottom: 67px;
+    left: unset;
+  }
 }
 .newsletter__bg-decor-center {
   position: absolute;
@@ -2393,16 +2444,37 @@ a {
   left: 50%;
   transform: translateX(-50%);
 }
+@media screen and (max-width: 768px) {
+  .newsletter__bg-decor-center {
+    left: unset;
+    top: unset;
+    bottom: 11px;
+    right: 34px;
+  }
+}
 .newsletter__bg-decor-right {
   position: absolute;
   right: 27px;
   top: 50%;
   transform: translateY(-50%);
 }
+@media screen and (max-width: 768px) {
+  .newsletter__bg-decor-right {
+    top: unset;
+    bottom: 25px;
+    right: 120px;
+  }
+}
 .newsletter__heading {
   position: relative;
   color: #FFF;
   z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .newsletter__heading {
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+  }
 }
 .newsletter__heading-wrap {
   position: relative;
@@ -2412,8 +2484,21 @@ a {
   bottom: -8px;
   left: -5px;
 }
+@media screen and (max-width: 768px) {
+  .newsletter__desc {
+    font-size: 1.4rem;
+  }
+}
 .newsletter-bottom {
   margin-top: 70px;
+}
+@media screen and (max-width: 768px) {
+  .newsletter-bottom {
+    margin-top: 38px;
+  }
+}
+.newsletter-bottom .row {
+  row-gap: 16px;
 }
 
 /* footer */

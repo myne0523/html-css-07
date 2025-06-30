@@ -381,25 +381,7 @@
 .feature{
     margin-top: 160px;
 
-    .row{
-        @include mixins.respond(md){
-        display: flex;
-        flex-direction: column;
-        }
 
-        .under{
-            @include mixins.respond(md){
-                margin-top: 38px;
-                order: 2;
-            }
-        }
-
-        .upper{
-            @include mixins.respond(md){
-                order: 1;
-            }
-        }
-    }
 
     &__heading-wrap{
         position: relative;
@@ -418,6 +400,14 @@
         .feature__heading-decor{
             @include mixins.respond(md){
                 left: 0;
+            }
+        }
+
+            .row{
+            @include mixins.respond(md){
+            display: flex;
+            flex-direction: column-reverse;
+            row-gap: 38px;
             }
         }
     }
@@ -585,10 +575,7 @@
             }
 
             .feature__heading-decor{
-                left: 0;
-
                 @include mixins.respond(md){
-                    left: unset;
                     right: 0;
                 }
             }
@@ -1045,6 +1032,18 @@
     position: relative;
     overflow-x: hidden;
 
+    @include mixins.respond(md){
+        padding-top: 100px;
+    }
+
+    .row{
+        @include mixins.respond(md){
+            display: flex;
+            flex-direction: column-reverse;
+            row-gap: 35px;
+        }
+    }
+
 
     &::after{
         position: absolute;
@@ -1058,6 +1057,10 @@
         border-radius: 50%;
         background: rgba(255, 144, 81, 0.4);
         filter: blur(129px);
+
+        @include mixins.respond(md){
+            display: none;
+        }
     }
 
     &__media{
@@ -1067,6 +1070,10 @@
             position: absolute;
             bottom: 0;
             left: 75px;
+
+            @include mixins.respond(md){
+                left: 0;
+            }
         }
     }
 
@@ -1075,6 +1082,12 @@
         &-layout{
             position: relative;
             align-items: center;
+
+            .row{
+                @include mixins.respond(md){
+                    row-gap: 0;
+                }
+            }
         }
 
         &-left{
@@ -1108,10 +1121,17 @@
 
     &__heading{
         @extend %h2;
+        @include mixins.respond(md){
+            font-size: 2.6rem;
+        }
 
         &-wrap{
             position: relative;
             margin-bottom: 38px;
+
+            @include mixins.respond(md){
+                margin-bottom: 12px;
+            }
         }
 
         &-decor-1{
@@ -1123,12 +1143,24 @@
             bottom: 40px;
             right: 55px;
             z-index: -1;
+
+            @include mixins.respond(md){
+                right: 36%;
+                top: 30%;
+            }
         }
     }
 
     &__desc{
         @extend %p2;
+        @include mixins.respond(md){
+            font-size: 1.4rem;
+        }
         margin-bottom: 18px;
+
+        @include mixins.respond(md){
+            margin-bottom: 12px;
+        }
     }
 
     &__name{
@@ -1148,12 +1180,22 @@
         padding: 100px 0;
         border-radius: 12px;
         background: #{var.$primary-color-heading};
+
+        @include mixins.respond(md){
+            width: 100%;
+        }
     }
 
     &__bg-decor-left{
         position: absolute;
         left: 35px;
         bottom: 45px;
+
+        @include mixins.respond(md){
+            right: 60px;
+            bottom: 67px;
+            left: unset;
+        }
     }
 
     &__bg-decor-center{
@@ -1161,6 +1203,13 @@
         top: 26px;
         left: 50%;
         transform: translateX(-50%);
+
+        @include mixins.respond(md){
+            left: unset;
+            top: unset;
+            bottom: 11px;
+            right: 34px;
+        }
     }
 
     &__bg-decor-right{
@@ -1168,6 +1217,12 @@
         right: 27px;
         top: 50%;
         transform: translateY(-50%);
+
+        @include mixins.respond(md){
+            top: unset;
+            bottom: 25px;
+            right: 120px;
+        }
     }
 
     &__heading{
@@ -1175,6 +1230,11 @@
         position: relative;
         color: #{var.$primary-color-btn-text};
         z-index: 1;
+
+        @include mixins.respond(md){
+            font-size: 2.6rem;
+            margin-bottom: 12px;
+        }
 
 
         &-wrap{
@@ -1190,11 +1250,21 @@
 
     &__desc{
         @extend %p2;
-
+        @include mixins.respond(md){
+            font-size: 1.4rem;
+        }
     }
 
     &-bottom{
         margin-top: 70px;
+
+        @include mixins.respond(md){
+            margin-top: 38px;
+        }
+
+        .row{
+            row-gap: 16px;
+        }
     }
 }
 
