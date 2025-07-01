@@ -44,17 +44,14 @@
     
                     <div class="header-center">
                         <!-- Tablet/Mobile menu -->
-                        <!-- <div class="mobile-menu">
-                            <div class="icon-mobile-menu-wrap">
-                                <img src="./assets/icons/header-icons.svg" alt="" class="icon-mobile-menu">
-                            </div>
+                        <div class="mobile-menu">
                             <label for="menu-checkbox" class="toggle-menu"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
                                 <circle opacity="0.2" cx="17" cy="17" r="16" stroke="#5D3BEE"/>
                                 <path d="M10 20H25" stroke="#5D3BEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M10 14H25" stroke="#5D3BEE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </label>
-                        </div> -->
+                        </div>
                         
                         <!-- Navigation -->
                         <nav class="navbar">
@@ -67,12 +64,38 @@
                         </nav>
                     </div>
 
-                    <div class="header-right">
+                    <div class="header-right show-on-desktop">
                         <a href="" class="header__link">Log in</a>
                         <a href="#!" class="header__btn">Sign up</a>
                     </div>
                 </div>
             </div>
+    </header>
+
+     <!-- Tablet/Mobile Header -->
+    <header class="mobile-header">
+        <input type="checkbox" name="" id="menu-checkbox" class="menu-checkbox" hidden>
+        <!-- Overplay -->
+        <label for="menu-checkbox" class="menu-overplay"></label>
+
+        <!-- Menu content -->
+        <div class="menu-drawer">
+        
+            <!-- Logo -->
+            <div class="logo__mobile-tablet">
+                <a href="#"><img src="./assets/icons/header-icons.svg" alt=""></a>
+                <label for="menu-checkbox" class="icon-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></label>
+            </div>
+
+            <!-- Navigation -->
+            <ul id="mobile-nav"></ul>
+            <script>
+                const pcNav = document.querySelector('#pc-nav');
+                const mobileNav = document.querySelector('#mobile-nav')
+                
+                mobileNav.innerHTML = pcNav.innerHTML;
+            </script>
+        </div>
     </header>
 
     <section class="hero">
@@ -588,7 +611,7 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-12">
                     <a href="#!" class="footer-logo">
                         <img src="./assets/img/Logo.png" alt="" class="logo">
                     </a>
@@ -611,9 +634,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 offset-lg-1">
+                <div class="col-lg-4 offset-lg-1 col-12">
                    <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-12">
                             <div class="footer__column">
                                 <ul class="footer__list">
                                     <h3 class="footer__heading">Linkes</h3>
@@ -625,7 +648,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-12">
                             <div class="footer__column">
                                 <ul class="footer__list">
                                     <h3 class="footer__heading">Features</h3>
@@ -636,7 +659,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-12">
                             <div class="footer__column">
                                 <ul class="footer__list">
                                     <h3 class="footer__heading">Company</h3>
@@ -649,7 +672,7 @@
                         </div>
                    </div>
                 </div>
-                <div class="col-lg-3 offset-lg-1">
+                <div class="col-lg-3 offset-lg-1 col-12">
                     <h3 class="footer__heading">Listen on</h3>
                     <div class="group__apps">
                         <img src="./assets/icons/pocketcast.png" alt="" class="footer-icon">

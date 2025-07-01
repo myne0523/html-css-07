@@ -1118,6 +1118,103 @@ a {
   color: #201830;
 }
 
+@media screen and (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .show-on-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 991.8px) {
+  .header {
+    padding: 20px 20px 0 20px;
+  }
+  .header__inner {
+    width: 100%;
+  }
+  .menu-drawer {
+    inset: 0 25% 0 0;
+    padding: 40px;
+  }
+  .navbar {
+    display: none;
+  }
+  .navbar {
+    position: relative;
+  }
+  .navbar .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .logo__mobile-tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .icon-close {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+  .navbar ul {
+    display: none;
+  }
+  .toggle-menu svg {
+    width: 34px;
+    color: #666;
+  }
+  .icon-mobile-menu-wrap {
+    width: 34px;
+    height: 34px;
+  }
+  .menu-overplay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+  }
+  .menu-drawer {
+    position: fixed;
+    inset: 0 40% 0 0;
+    background: #FFF;
+    padding: 60px;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.5s ease;
+  }
+  .menu-drawer ul {
+    margin-top: 32px;
+  }
+  .menu-drawer a {
+    display: block;
+    padding: 14px 0;
+    color: #333;
+    font-weight: 500;
+  }
+  .menu-checkbox:checked ~ .menu-overplay {
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu-drawer {
+    inset: 0 25% 0 0;
+    padding: 40px;
+  }
+}
+
 .navbar__list {
   --primary-heading-color:#201830;
   display: flex;
@@ -2505,6 +2602,11 @@ a {
 .footer {
   padding: 100px 0 40px;
   background: #FFF8F3;
+}
+@media screen and (max-width: 768px) {
+  .footer .row .col-12 {
+    margin-top: 25px;
+  }
 }
 .footer .logo {
   width: 116.12px;

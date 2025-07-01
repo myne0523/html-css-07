@@ -1273,6 +1273,14 @@
 .footer{
     padding: 100px 0 40px;
     background: #{var.$primary-color-bg};
+
+    .row{
+        .col-12{
+            @include mixins.respond(md){
+                margin-top: 25px;
+            }
+        }
+    }
     
     .logo{
         width: 116.12px;
